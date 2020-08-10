@@ -4,10 +4,12 @@ The Latex Autobuilder is...an autobuilder for LaTeX.
 
 It takes in the name of a `.tex` file, and waits for the file to change. Upon changing, the code will then remake the pdf and show it to screen.
 
+<br/>
 ## Requirements
 - [BasicTex](http://www.tug.org/mactex/morepackages.html)
 - [Clang](https://releases.llvm.org/download.html)
 
+<br/>
 ## Usage
 1. Navigate to the folder containing `latex_autobuilder.c`
   ```console
