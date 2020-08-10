@@ -1,7 +1,6 @@
 ## Description 
 ###### Made for mac
-The Latex Autobuilder is...an autobuilder for LaTeX.
-
+The Latex Autobuilder is...an autobuilder for LaTeX.\
 It takes in the name of a `.tex` file, and waits for the file to change. Upon changing, the code will then remake the pdf and show it to screen.
 
 <p>&nbsp;</p>
