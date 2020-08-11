@@ -4,7 +4,7 @@
 
 \begin{document}
 	\begin{tikzpicture}[scale=0.5pt] 
-		\newcommand\qoffset{11} 
+		\newcommand\qoffset{12} 
 		\newcommand\smallx{8}
 		\newcommand\smally{4} 
 		\newcommand\py{\fpeval{\smally * (\qoffset / (\qoffset - \smallx))}}
@@ -17,8 +17,7 @@
 		\coordinate (smallxcap) at ($(xcap) + (0, \smally)$);
 		\coordinate (q) at ($(origin) + (\qoffset, 0)$);	
 		\coordinate (p) at ($(origin) + (0, \py)$);	
-
-		%outermost lines
+	
 		\draw (origin) rectangle ($(origin) + (1, 1)$);
 		\draw (origin) -- (ycap) node [black, midway, left]{$y$};
 		\draw (origin) -- (xcap) node [black, midway, below]{$x$};
@@ -30,5 +29,6 @@
 		\fill (p) circle(0.1) node[anchor = east]{$p$};
 		\draw (p) -- (q) node[midway, above right] {$L$};
 		\pic [draw, -, "$\theta$", angle eccentricity = 1.5] {angle = p--q--origin};
+	
 	\end{tikzpicture}
 \end{document}
