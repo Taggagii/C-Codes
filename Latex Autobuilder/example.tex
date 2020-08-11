@@ -8,22 +8,24 @@
 		\newcommand\smallx{8}
 		\newcommand\smally{4} 
 		\newcommand\py{\fpeval{\smally * (\qoffset / (\qoffset - \smallx))}}
+		\newcommand\caps{\the\numexpr\smallx * \smally - \smallx - \smally}
 		\coordinate (origin) at (0, 0);
-		\coordinate (ycap) at ($(origin) + (0, 20)$);
-		\coordinate (xcap) at ($(origin) + (20, 0)$);		
+		\coordinate (ycap) at ($(origin) + (0, \caps)$);
+		\coordinate (xcap) at ($(origin) + (\caps, 0)$);		
 		\coordinate (smallorigin) at ($(origin) + (\smallx, \smally)$);
 		\coordinate (smallycap) at ($(ycap) + (\smallx, 0)$);
 		\coordinate (smallxcap) at ($(xcap) + (0, \smally)$);
 		\coordinate (q) at ($(origin) + (\qoffset, 0)$);	
 		\coordinate (p) at ($(origin) + (0, \py)$);	
 
+		%outermost lines
 		\draw (origin) rectangle ($(origin) + (1, 1)$);
 		\draw (origin) -- (ycap) node [black, midway, left]{$y$};
 		\draw (origin) -- (xcap) node [black, midway, below]{$x$};
 		\draw (smallorigin) -- (smallycap); 
 		\draw (smallorigin) -- (smallxcap);
-		\draw[dashed, gray] ($(origin) + (8, 0)$) -- (smallorigin) node [black, midway, left] {4};
-		\draw[dashed, gray] ($(origin) + (0, 4)$) -- (smallorigin) node [black, midway, below] {8};
+		\draw[dashed, gray] ($(origin) + (\smallx, 0)$) -- (smallorigin) node [black, midway, left] {\smally};
+		\draw[dashed, gray] ($(origin) + (0, \smally)$) -- (smallorigin) node [black, midway, below] {\smallx};
 		\fill (q) circle(0.1) node[anchor = north]{$q$};
 		\fill (p) circle(0.1) node[anchor = east]{$p$};
 		\draw (p) -- (q) node[midway, above right] {$L$};
