@@ -4,6 +4,7 @@
 
 
 // merge(dest, src1, len1, sec2, len2) modifies dest to contain the elements from both src1 and src2 in sorted order
+// there are ways to merge without needing something like malloc, but speed beats constant space here
 void merge(int a[], int mid, int len) {
     int pos1 = 0;
     int pos2 = mid;
